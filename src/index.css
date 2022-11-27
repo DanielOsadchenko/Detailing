@@ -1,5 +1,5 @@
 @import-normalize;
-
+@import '~react-image-gallery/styles/css/image-gallery.css';
 body {
   margin: 0;
   font-family: 'Jura', sans-serif;
@@ -55,4 +55,14 @@ textarea,
 select,
 a {
   font-family: 'Jura', sans-serif;
+}
+
+svg {
+  width: 32px;
+}
+
+address {
+  text-decoration: none;
+  text-transform: none;
+  font-style: normal;
 }

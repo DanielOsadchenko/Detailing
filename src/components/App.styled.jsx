@@ -7,7 +7,9 @@ width: 1440px;
 text-align: center;
 margin-top: 110px;`;
 
-export const Hero = styled.section``;
+export const Hero = styled.section`
+display: flex;
+justify-content: center;`;
 
 export const Header = styled.header`
 display: flex;
@@ -200,26 +202,117 @@ text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   margin-top: 30px;
 }`;
 
+export const ResultBtn = styled.button`
+margin-top: 40px;
+margin-bottom: 40px;
+width: 500px;
+height:110px;
+border: 3px solid #E89636;
+filter: drop-shadow(2px 2px 50px rgba(148, 140, 160, 0.3));
+border-radius: 16px;
+font-weight: 700;
+font-size: 40px;
+line-height: 47px;
+color: #E89636;
+text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+background: transparent;
+cursor: pointer;
 
-// .carousel {
-//   position: relative;
-// }
+:hover {
+  background: #E89636;
+  color: #262A30;
+}
+`;
 
-// .carousel-item {
-//   position: absolute;
-//   visibility: hidden;
-//   background: #fec901;
-//   width: 400px;
-//   height: 300px;
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-//   font-size: 26px;
-//   text-transform: uppercase;
-//   font-weight: bold;
-//   user-select: none;
-// }
 
-// .carousel-item.visible {
-//   visibility: visible;
-// }
+export const ContactBox = styled.div`
+display: flex;
+justify-content: center;
+
+`;
+
+export const ContactCard = styled.div`
+width: 622px;
+height: 94px;
+display: flex;
+justify-content: space-evenly;
+align-items: center;
+border: 3px solid #E89636;
+border-radius: 16px;
+
+
+&+& {
+  margin-top:20px;
+}`;
+
+export const StyledContacts = styled.div`
+margin-right: 24px;`;
+
+export const ContactText = styled.a`
+display: inline-block;
+font-weight: 500;
+font-size: 24px;
+line-height: 28px;
+letter-spacing: 0.15em;
+font-feature-settings: 'ss01' on;
+color: #E89636;
+
+
+:hover {
+  color:#E4D8C9;
+  transform: scale(1.05);
+}
+`;
+
+
+export const Footer = styled.footer`
+background-color: #E89636;`;
+
+export const FooterBox = styled.div`
+width:1280px;
+padding: 20px 80px;
+display: flex;
+align-items: center;
+justify-content: space-between;
+flex-wrap: wrap;
+`;
+
+export const LinkFoot = styled.a`
+font-weight: 700;
+font-size: 24px;
+
+letter-spacing: 0.15em;
+
+color: #262A30;
+:hover {
+  color: #E4D8C9
+}
+
+&+& {
+  margin-left:24px;
+}`;
+
+export const Bold = styled.p`
+font-style: normal;
+font-weight: 700;
+font-size: 18px;
+line-height: 36px;
+text-align: right;
+color: #262A30;`;
+
+export const FooterTag = styled.p`
+font-weight: 700;
+font-size: 20px;
+line-height: 36px;
+display: block;
+text-align: center;
+width:100%;
+margin-top: 20px;
+color: #262A30;
+
+::before {
+  content: '';
+  display: block;
+  width: 100%;
+  border-bottom: 3px solid #262A30;
+}`;
