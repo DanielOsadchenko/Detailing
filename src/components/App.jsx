@@ -138,9 +138,9 @@ export const App = () => {
             <a href='mailto:rudik20011@gmail.com'>rudik20011@gmail.com</a>
           </ContactCard>
             <ContactCard>
-              <a href='https://www.instagram.com/'><Instagram /></a>
+              <div style={{width: '50%', display: 'flex', justifyContent: 'space-between'}}><a href='https://www.instagram.com/'><Instagram /></a>
               <a href='https://pl-pl.facebook.com/'><Facebook /></a>
-              <a href='https://www.whatsapp.com/'><Whatsapp/></a>
+              <a href='https://www.whatsapp.com/'><Whatsapp/></a></div>
               </ContactCard>
               
             </ContactSet>
