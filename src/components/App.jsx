@@ -4,28 +4,37 @@ import blackLogo from '../images/blackLogo.png';
 import smallLogo from '../images/logo.png';
 import { Mail, Tel, Tag, Instagram, Facebook, Whatsapp } from './source/images';
 import SimpleSlider from './SimpleSlider/SimpleSlider';
-import { Container, HeroBg, Header, Line, Nav, NavLink, Hero, HeroTitle, HeroButton, Logo } from './App.styled';
+import { Container, HeroBg, HeaderNav, Header, Line, Nav, NavLink, Hero, HeroTitle, HeroButton, Logo } from './App.styled';
 
 
 export const App = () => {
 
     return <div>
       <HeroBg>
-        <Container>
+        
           <Header>
-            <NavLink href="#Home"><Logo src={logo} alt="Detailing by Semenov" /></NavLink>
-          <Nav>
+            <Container>
+            <HeaderNav>
+              <NavLink href="#Home"><Logo src={logo} alt="Detailing by Semenov" /></NavLink>
+              <div>
+                <Nav>
             <NavLink href="#Price">Послуги</NavLink>
             <NavLink href="#Result">Результат</NavLink>
             <NavLink href="#contacts">Контакти</NavLink>
-            </Nav>
-            <Line></Line>
+              </Nav>
+              <Line></Line>
+              </div>
+              </HeaderNav>
+            
+            </Container>
         </Header>
         <Hero>
+          <Container>
             <HeroTitle id='#Home'>Студія детейлінгу</HeroTitle>
             <HeroButton type='button'>Обрати послугу</HeroButton>
+            </Container>
         </Hero>
-        </Container>
+        
       </HeroBg>
     
       <Container>
