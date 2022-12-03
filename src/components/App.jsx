@@ -128,7 +128,7 @@ export const App = () => {
       </Container>
 
         <footer>
-        <div>
+        <Container><div>
           <img src={blackLogo} alt="Detailing by Semenov" width='193' height='47' />
           <address>
             <a href="#Price">Послуги</a>
@@ -137,7 +137,7 @@ export const App = () => {
           </address>
 
           <p>Produced by: <a href='https://www.linkedin.com/in/danylo-osadchenko/'>Danylo Osadchenko</a> | © 2022 Всі права захищені | Designed by: <a href='https://www.behance.net/denionly'>Denys Rudenko</a></p>
-          </div>
+          </div></Container>
         </footer>
 
     </div>

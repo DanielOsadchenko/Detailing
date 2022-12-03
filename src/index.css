@@ -11,6 +11,7 @@ body {
   line-height: 57px;
   background: #262a30;
   letter-spacing: 0.03em;
+  overflow-x: hidden;
 }
 
 code {

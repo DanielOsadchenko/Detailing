@@ -22,7 +22,8 @@ padding: 40px;
 @media screen and (min-width: 1440px) {
 min-width: 1280px;
 max-width: 1280px;
-padding: 80px;
+padding-left: 80px;
+padding-right: 80px;
 }
 `;
 
@@ -126,7 +127,7 @@ margin-top: 160px;
   margin-top: 60px;
 }
 @media screen and (min-width: 1440px) {
-  margin-top: 120px;
+  margin-top: 80px;
 }
 `;
 export const HeroTitle = styled.h1`
@@ -153,7 +154,7 @@ max-width: 400px;
 min-width: 280px;
 min-height: 80px;
 margin-top: 400px;
-margin-bottom: 50px;
+margin-bottom: 20px;
 
 cursor: pointer;
 
@@ -172,5 +173,10 @@ color: #262A30;
 @media screen and (min-width: 768px) {
   font-size: 36px;
   margin-top: 500px;
+}
+
+@media screen and (min-width: 1440px) {
+  font-size: 36px;
+  margin-top: 300px;
 }
 `;
