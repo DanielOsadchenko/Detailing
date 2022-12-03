@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import bgImage from '../images/background.jpg';
+// import bgImage from '../images/background.jpg';
 import mobileBgImage from '../images/mobileBG.jpg';
 
 
@@ -73,7 +73,8 @@ background-color: transparent;
 max-width: 400px;
 min-width: 300px;
 height: 74px;
-margin-top: 420px;
+margin-top: 400px;
+margin-bottom: 50px;
 
 cursor: pointer;
 
