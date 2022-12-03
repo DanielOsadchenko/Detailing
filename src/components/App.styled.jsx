@@ -82,6 +82,13 @@ border-top: 4px solid #E89636;
   width: 628px;
 }
 `;
+
+export const BlackLine = styled.span`
+display: block;
+width:100%;
+border-top: 2px solid #262A30;
+`;
+
 export const Nav = styled.nav`
 display: flex;
 justify-content: center;
@@ -339,3 +346,171 @@ text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 `;
 
+export const SliderBox = styled.div`
+margin-top: 20px;
+width: 80%;
+margin-inline: auto;
+margin-bottom: 20px;
+
+@media screen and (min-width: 1440px) {
+margin-top: 40px;
+}
+`;
+
+export const ResultBtn = styled.button`
+border: 3px solid #E89636;
+filter: drop-shadow(2px 2px 50px rgba(148, 140, 160, 0.3));
+border-radius: 8px;
+background-color: transparent;
+max-width: 400px;
+min-width: 280px;
+min-height: 60px;
+cursor: pointer;
+font-weight: 700;
+font-size: 20px;
+line-height: 1.2;
+letter-spacing: 0.05em;
+color: #E89636;
+text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+:hover {
+background: #E89636;
+color: #262A30;
+}
+
+@media screen and (min-width: 768px) {
+  font-size: 28px;
+}
+
+@media screen and (min-width: 1440px) {
+  font-size: 36px;
+  min-height: 80px;
+}`;
+
+
+export const ContactSet = styled.ul`
+max-width: 440px;
+margin-inline: auto;
+display: grid;
+grid-template-columns: 1fr;
+grid-gap: 20px;
+margin-top: 20px;
+
+@media screen and (min-width: 768px) {
+  grid-template-columns: 1fr 1fr;
+  max-width: 100%;
+  margin-top: 40px;
+}
+
+@media screen and (min-width: 1440px) {
+  grid-gap: 40px;
+  margin-top: 80px;
+}`;
+
+export const ContactCard = styled.li`
+position: relative;
+display: flex;
+justify-content: center;
+align-items: center;
+border: 3px solid #E89636;
+border-radius: 8px;
+color: #E89636;
+min-height: 64px;
+font-size: 12px;
+line-height: 1.2;
+letter-spacing: 0.03em;
+font-feature-settings: 'ss01' on;
+
+:hover {
+background-color: #393530;
+}
+
+
+
+&>a {
+  color: #E89636;
+  margin-left: 40px;
+  cursor: pointer;
+}
+&>p {
+  color: #E89636;
+  margin-left: 40px;
+}
+@media screen and (min-width: 768px) {
+  font-size: 15px;
+}
+
+@media screen and (min-width: 1440px) {
+  font-size: 20px;
+}
+
+
+`;
+
+export const SvgBox = styled.div`
+position: absolute;
+top: 12px;
+left: 5px;`;
+
+export const MapBox = styled.div`
+
+margin-top: 20px;
+position: relative;
+    overflow: hidden;
+    padding-top: 56.25%;
+`;
+
+
+
+export const FooterContainer = styled.div`
+text-align: center;
+@media screen and (min-width: 768px) {
+  display: flex;
+  justify-content: space-between;
+}
+`;
+export const BlackLogo = styled.img`
+@media screen and (max-width: 767px) {
+  margin-inline: auto;
+}
+
+`;
+
+export const Address = styled.address`
+font-style: normal;
+font-weight: 700;
+font-size: 10px;
+line-height: 1.2;
+letter-spacing: 0.15em;
+margin-top: 20px;
+margin-bottom: 20px;
+
+display: flex;
+justify-content: center;
+&>a{color: #262A30;}
+& a+a{
+margin-left:12px;
+}
+
+
+@media screen and (min-width: 768px) {
+  font-size: 16px;
+}
+
+@media screen and (min-width: 1440px) {
+  font-size: 24px;
+}`;
+
+export const FooterTag = styled.p`
+font-weight: 400;
+font-size: 10px;
+line-height: 1.2;
+color: #262A30;
+margin-top: 4px;
+@media screen and (min-width: 768px) {
+  font-size: 12px;
+}
+
+@media screen and (min-width: 1440px) {
+  font-size: 16px;
+}`;

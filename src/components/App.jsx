@@ -4,7 +4,7 @@ import blackLogo from '../images/blackLogo.png';
 // import smallLogo from '../images/logo.png';
 import { Mail, Tel, Tag, Instagram, Facebook, Whatsapp } from './source/images';
 import SimpleSlider from './SimpleSlider/SimpleSlider';
-import { Container, HeroBg, Card, CardTitle, CardBox, CardText, CardPrice, About, PriceCardSet, Title, TitleBox, HeaderNav, Header, Line, Nav, NavLink, Hero, HeroTitle, HeroButton, Logo, TitleLine } from './App.styled';
+import { Container, HeroBg, BlackLine, BlackLogo, Address, FooterTag, FooterContainer, MapBox, SvgBox, ContactCard, Card, SliderBox, CardTitle, CardBox, CardText, CardPrice, About, PriceCardSet, Title, TitleBox, HeaderNav, Header, Line, Nav, NavLink, Hero, HeroTitle, HeroButton, Logo, TitleLine, ResultBtn, ContactSet } from './App.styled';
 
 
 export const App = () => {
@@ -104,13 +104,11 @@ export const App = () => {
             <Title id='Result'>Роботи</Title>
             <TitleLine />
           </TitleBox>
-        <div style={{width: '200px', marginLeft: 'auto', marginRight: 'auto'
-      }}>
+        <SliderBox>
           <SimpleSlider/>
-        </div>
+        </SliderBox>
         
-        
-        <button type='button'>Обрати послугу</button>
+        <ResultBtn type='button'>Обрати послугу</ResultBtn>
         </Container>
       </section>
 
@@ -124,43 +122,52 @@ export const App = () => {
 
         <div id='Contacts'>
 
-          <ul>
-            <li>
-              <Tag fill='#E89636' />
+          <ContactSet>
+              <ContactCard>
+                <SvgBox><Tag fill='#E89636' /></SvgBox>
             <p>78-400, Szczecinek, ul. Słowiańska 15</p>
-          </li>
-          <li>
-            <Tel fill='#E89636' />
+          </ContactCard>
+              <ContactCard>
+                <SvgBox><Tel fill='#E89636' /></SvgBox>
+            
             <a href='tel:575138491'>+48 575 138 491</a>
-          </li>
-          <li>
-            <Mail fill='#E89636' />
+          </ContactCard>
+              <ContactCard>
+                <SvgBox><Mail fill='#E89636' /></SvgBox>
+            
             <a href='mailto:rudik20011@gmail.com'>rudik20011@gmail.com</a>
-          </li>
-            <li>
+          </ContactCard>
+            <ContactCard>
               <a href='https://www.instagram.com/'><Instagram /></a>
               <a href='https://pl-pl.facebook.com/'><Facebook /></a>
               <a href='https://www.whatsapp.com/'><Whatsapp/></a>
-            </li>
-          </ul>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d717.5571539267908!2d16.7118121357247!3d53.70317142714334!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470185501c149d49%3A0x5d5c3f198abc067e!2sDetailing%20by%20Semenov!5e0!3m2!1sru!2spl!4v1669551711782!5m2!1sru!2spl"  style={{border: '3px solid #E89636', borderRadius: '16px',width: 'calc(100% - 30px)', height: "293px",}} allowFullScreen="" loading="lazy" title='Detailing by Semenov Map' referrerPolicy="no-referrer-when-downgrade"></iframe>
-
+              </ContactCard>
+              
+            </ContactSet>
+            <MapBox>
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1756.6413919223196!2d16.7118586483647!3d53.703537406729694!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470185501c149d49%3A0x5d5c3f198abc067e!2sDetailing%20by%20Semenov!5e0!3m2!1sru!2spl!4v1670085461774!5m2!1sru!2spl" style={{width: '100%', height: '100%', position: 'absolute', top: 0, left: 0,}} allowFullScreen="" loading="lazy" title='Detailing by Semenov Map' referrerPolicy="no-referrer-when-downgrade"></iframe>
+            </MapBox>
+            
 
         </div>
         </Container>
       </section>
 
         <footer>
-        <Container><div>
-          <img src={blackLogo} alt="Detailing by Semenov" width='193' height='47' />
-          <address>
+        <Container>
+          <FooterContainer>
+          <BlackLogo src={blackLogo} alt="Detailing by Semenov" width='193' height='47' />
+          <Address>
             <a href="#Price">Послуги</a>
             <a href="#Result">Результат</a>
             <a href="#contacts">Контакти</a>
-          </address>
-
-          <p>Produced by: <a href='https://www.linkedin.com/in/danylo-osadchenko/'>Danylo Osadchenko</a> | © 2022 Всі права захищені | Designed by: <a href='https://www.behance.net/denionly'>Denys Rudenko</a></p>
-          </div></Container>
+          </Address>
+          </FooterContainer>
+          <BlackLine></BlackLine>
+          <FooterTag>Produced by: <a href='https://www.linkedin.com/in/danylo-osadchenko/'>Danylo Osadchenko</a></FooterTag>
+          <FooterTag>© 2022 Всі права захищені</FooterTag>
+          <FooterTag>Designed by: <a href='https://www.behance.net/denionly'>Denys Rudenko</a></FooterTag>
+        </Container>
         </footer>
 
     </div>
