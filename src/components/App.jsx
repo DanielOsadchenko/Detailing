@@ -1,10 +1,10 @@
 import React from 'react';
 import logo from '../images/fullLogo.png';
 import blackLogo from '../images/blackLogo.png';
-import smallLogo from '../images/logo.png';
+// import smallLogo from '../images/logo.png';
 import { Mail, Tel, Tag, Instagram, Facebook, Whatsapp } from './source/images';
 import SimpleSlider from './SimpleSlider/SimpleSlider';
-import { Container, HeroBg, HeaderNav, Header, Line, Nav, NavLink, Hero, HeroTitle, HeroButton, Logo } from './App.styled';
+import { Container, HeroBg, Card, CardTitle, CardBox, CardText, CardPrice, About, PriceCardSet, Title, TitleBox, HeaderNav, Header, Line, Nav, NavLink, Hero, HeroTitle, HeroButton, Logo, TitleLine } from './App.styled';
 
 
 export const App = () => {
@@ -20,7 +20,7 @@ export const App = () => {
                 <Nav>
             <NavLink href="#Price">Послуги</NavLink>
             <NavLink href="#Result">Результат</NavLink>
-            <NavLink href="#contacts">Контакти</NavLink>
+            <NavLink href="#Contacts">Контакти</NavLink>
               </Nav>
               <Line></Line>
               </div>
@@ -37,56 +37,73 @@ export const App = () => {
         
       </HeroBg>
     
-      <Container>
         <section>
-        <h2>Про нас</h2>
-        <p>
+        <Container>
+          <TitleBox>
+            <TitleLine />
+            <Title>Про нас</Title>
+            <TitleLine />
+          </TitleBox>
+            
+        <About>
           Дозвольте представитися, мене звати Микита Семенов. Detailing - (англ.) виконання максимально ретельного і делікатного очищення кузова і салону, полірування кузова автомобіля, нанесення захисних складів на всі його ділянки для надання Вашому автомобілю шоу-якості. У Детейлінг студії "Semenov" всі роботи я виконую сам. У мене немає секретарів, менеджерів і найманого персоналу. Причина цього проста. Я перфекціоніст, і я не можу довірити будь-кому догляд за Вашим автомобілем, з таким досвідом і ентузіазмом. Таким чином, Ви можете бути впевнені в персональному обслуговуванні від Semenov, і неперевершеному рівні робіт. Жодна деталь Вашого автомобіля не залишиться без уваги.
           Наша детейлінг майстерня виконує повний комплекс по догляду за екстер'єром та інтер'єром авто.
-        </p>
-        <img src={smallLogo} alt="Detailing by Semenov" />
+        </About>
+        {/* <img src={smallLogo} alt="Detailing by Semenov" /> */}
+        </Container>
       </section>
 
       <section>
-        <h2>Послуги</h2>
+        <Container>
+          <TitleBox>
+            <TitleLine />
+            <Title>Послуги</Title>
+            <TitleLine />
+          </TitleBox>
       
-        <ul id='Price'>
-          <li>
-            <h3>Полірування фар</h3>
-            <div>
-              <p>Полірування фар застосовується у випадках помутніння, пожовтіння або для усунення дефектів і подряпин, отриманих в результаті дрібних ДТП і пригод.</p>
-              <p>від 150zl</p>
-            </div>
-          </li>
+        <PriceCardSet id='Price'>
+          <Card>
+            <CardTitle>Полірування фар</CardTitle>
+            <CardBox>
+              <CardText>Полірування фар застосовується у випадках помутніння, пожовтіння або для усунення дефектів і подряпин, отриманих в результаті дрібних ДТП і пригод.</CardText>
+              <CardPrice>від 150zl</CardPrice>
+            </CardBox>
+          </Card>
 
-          <li>
-            <h3>Полірування кузову</h3>
-            <div>
-              <p>Процедура полірування допоможе повернути поверхні автомобіля дзеркальний блиск і позбутися дрібних дефектів.</p>
-              <p>від 150zl</p>
-            </div>
-          </li>
+          <Card>
+            <CardTitle>Полірування кузову</CardTitle>
+            <CardBox>
+              <CardText>Процедура полірування допоможе повернути дзеркальний блиск і позбутися дрібних дефектів. Ми можемо відполірувати як один елемент, так і весь кузов.</CardText>
+              <CardPrice>від 150zl</CardPrice>
+            </CardBox>
+          </Card>
 
-          <li>
-            <h3>Хімчистка комплекс</h3>
-            <div>
-              <p>Комплекс хімчистки автомобіля зачіпає не тільки килимове покриття, сидіння, а й стелю, двері, приладову панель, пластикові деталі.</p>
-              <p>від 300zl</p>
-            </div>
-          </li>
+          <Card>
+            <CardTitle>Хімчистка комплекс</CardTitle>
+            <CardBox>
+              <CardText>Комплекс хімчистки автомобіля зачіпає не тільки килимове покриття, сидіння, а й стелю, двері, приладову панель, пластикові деталі.</CardText>
+              <CardPrice>від 300zl</CardPrice>
+            </CardBox>
+          </Card>
 
-          <li>
-            <h3>Хімчистка елементу</h3>
-            <div>
-              <p>Хімчистка будь-якого елементу салону. Якщо ви розлили каву, або перевозили в багажнику брудні речі, вам може знадобитися ця послуга.</p>
-              <p>від 80zl</p>
-            </div>
-          </li>
-        </ul>
+          <Card>
+            <CardTitle>Хімчистка елементу</CardTitle>
+            <CardBox>
+              <CardText>Хімчистка будь-якого елементу салону. Якщо ви розлили каву, або перевозили в багажнику брудні речі, вам може знадобитися ця послуга.</CardText>
+              <CardPrice>від 80zl</CardPrice>
+            </CardBox>
+          </Card>
+        </PriceCardSet>
+        </Container>
       </section>
 
       <section>
-        <h2 id='Result'>Результат</h2>
+        <Container>
+          <TitleBox>
+            <TitleLine />
+            <Title id='Result'>Роботи</Title>
+            <TitleLine />
+          </TitleBox>
         <div style={{width: '200px', marginLeft: 'auto', marginRight: 'auto'
       }}>
           <SimpleSlider/>
@@ -94,12 +111,18 @@ export const App = () => {
         
         
         <button type='button'>Обрати послугу</button>
+        </Container>
       </section>
 
       <section>
-        <h2>Контакти</h2>
+        <Container>
+          <TitleBox>
+            <TitleLine />
+            <Title>Контакти</Title>
+            <TitleLine />
+          </TitleBox>
 
-        <div id='contacts'>
+        <div id='Contacts'>
 
           <ul>
             <li>
@@ -124,8 +147,8 @@ export const App = () => {
 
 
         </div>
+        </Container>
       </section>
-      </Container>
 
         <footer>
         <Container><div>

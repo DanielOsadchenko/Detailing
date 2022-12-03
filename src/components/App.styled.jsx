@@ -7,7 +7,7 @@ import tabletBgImage from '../images/tabletBG.jpg';
 export const Container = styled.div`
 min-width: 280px;
 max-width: 440px;
-padding: 20px;
+padding: 10px 20px;
 margin-left: auto;
 margin-right: auto;
 text-align: center;
@@ -16,14 +16,13 @@ text-align: center;
 @media screen and (min-width: 768px) {
 min-width: 688px;
 max-width: 688px;
-padding: 40px;
+padding: 20px 40px;
 }
 
 @media screen and (min-width: 1440px) {
 min-width: 1280px;
 max-width: 1280px;
-padding-left: 80px;
-padding-right: 80px;
+padding: 40px 80px;
 }
 `;
 
@@ -180,3 +179,163 @@ color: #262A30;
   margin-top: 300px;
 }
 `;
+
+export const Title = styled.h2`
+display: block;
+text-align: center;
+font-weight: 700;
+font-size: 16px;
+line-height: 1.2;
+letter-spacing: 0.15em;
+color: #E89636;
+
+@media screen and (min-width: 768px) {
+  font-size: 24px;
+}
+
+@media screen and (min-width: 1440px) {
+  font-size: 56px;
+}
+`;
+
+export const TitleLine = styled.span`
+display: block;
+width: 80px;
+border-top: 3px solid #E89636;
+
+@media screen and (min-width: 360px) {
+  width: 100px;
+}
+@media screen and (min-width: 390px) {
+  width: 120px;
+}
+@media screen and (min-width: 450px) {
+  width: 140px;
+}
+@media screen and (min-width: 480px) {
+  width: 169px;
+}
+@media screen and (min-width: 768px) {
+  width: 250px;
+}
+@media screen and (min-width: 1440px) {
+  width: 450px;
+}
+`;
+export const TitleBox = styled.div`
+display: flex;
+align-items: center;
+justify-content: space-between;
+`;
+
+
+export const About = styled.p`
+font-weight: 400;
+font-size: 12px;
+line-height: 1.8;
+letter-spacing: 0.04em;
+
+margin-top: 10px;
+
+color: #E89636;
+
+@media screen and (min-width: 768px) {
+  font-size: 16px;
+  margin-top: 20px;
+}
+@media screen and (min-width: 1440px) {
+  font-size: 24px;
+  margin-top: 40px;
+}
+
+`;
+
+export const PriceCardSet = styled.ul`
+max-width: 400px;
+margin-inline: auto;
+display: grid;
+grid-template-columns: 1fr;
+grid-gap: 20px;
+margin-top: 20px;
+
+@media screen and (min-width: 768px) {
+  grid-template-columns: 1fr 1fr;
+  max-width: 100%;
+  margin-top: 40px;
+}
+
+@media screen and (min-width: 1440px) {
+  grid-gap: 40px;
+  margin-top: 80px;
+}
+`;
+
+export const Card = styled.li`
+
+`;
+export const CardTitle = styled.h3`
+background: #E89636;
+display: block;
+border-radius: 8px 8px 0px 0px;
+
+font-weight: 700;
+font-size: 14px;
+line-height: 1.2;
+letter-spacing: 0.04em;
+color: #262A30;
+text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+padding: 8px 0;
+@media screen and (min-width: 768px) {
+  font-size: 22px;
+}
+
+@media screen and (min-width: 1440px) {
+  font-size: 40px;
+  padding: 30px 0;
+}
+`;
+export const CardBox = styled.div`
+
+padding: 10px;
+border-left: 3px solid #E89636;
+border-bottom: 3px solid #E89636;
+border-right: 3px solid #E89636;
+border-bottom-left-radius: 8px;
+border-bottom-right-radius: 8px;
+background: transparent;
+:hover {
+  background-color: #393530;
+}
+@media screen and (min-width: 1440px) {
+  padding: 20px;
+}
+`;
+export const CardText = styled.p`
+font-weight: 400;
+font-size: 12px;
+line-height: 1.8;
+color: #E4D8C9;
+text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+@media screen and (min-width: 768px) {
+  font-size: 18px;
+}
+@media screen and (min-width: 1440px) {
+  font-size: 24px;
+}
+`;
+export const CardPrice = styled.p`
+font-weight: 700;
+font-size: 14px;
+line-height: 1.8;
+margin-top: 10px;
+color: #E89636;
+
+text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+@media screen and (min-width: 768px) {
+  font-size: 20px;
+}
+@media screen and (min-width: 1440px) {
+  font-size: 28px;
+}
+`;
+
