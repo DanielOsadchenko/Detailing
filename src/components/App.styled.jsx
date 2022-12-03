@@ -165,7 +165,7 @@ margin-bottom: 20px;
 cursor: pointer;
 
 font-weight: 700;
-font-size: 32px;
+font-size: 28px;
 line-height: 1.2;
 letter-spacing: 0.05em;
 color: #E89636;
