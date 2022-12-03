@@ -45,7 +45,6 @@ a {
 }
 
 img {
-  max-width: 100%;
   display: block;
 }
 
@@ -59,10 +58,4 @@ a {
 
 svg {
   width: 32px;
-}
-
-address {
-  text-decoration: none;
-  text-transform: none;
-  font-style: normal;
 }
