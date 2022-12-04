@@ -33,6 +33,10 @@ color: #E4D8C9;
 pointer-events: none;
 
 transition: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+
+transform: translateY(-50%) scale(0.8);
+  background-color: #1E1E1E;
+  padding: 0 0.2em;
 `;
 
 export const Backdrop = styled.div`

@@ -14,6 +14,27 @@ export const App = () => {
   const toggleModal = () => {
     setIsModalOpen(prev => !prev);
   }
+
+  const formSubmit = (e) => {
+    async function submit() {
+      e.preventDefault();
+      const form = document.querySelector('#form');
+      let formData = new FormData(form);
+      let responce = await fetch('sendmail.php', {
+        method: 'POST',
+        body: formData,
+      });
+      if (responce.ok) {
+        let result = await responce.json();
+        alert(result.message);
+        form.reset();
+      }
+      else {alert('Помилка!')};
+    }
+    
+    
+    submit();
+  }
     return <div>
       <HeroBg>
         
@@ -170,28 +191,28 @@ export const App = () => {
           </FooterContainer>
           <BlackLine></BlackLine>
           <FooterTag>Produced by: <a href='https://www.linkedin.com/in/danylo-osadchenko/'>Danylo Osadchenko</a></FooterTag>
-          <FooterTag>© 2022 Всі права захищені</FooterTag>
           <FooterTag>Designed by: <a href='https://www.behance.net/denionly'>Denys Rudenko</a></FooterTag>
+          <FooterTag>© 2022 Всі права захищені</FooterTag>
         </Container>
       </footer>
       
-      {isModalOpen && <Modal onClose={toggleModal}><Form action="">
+      {isModalOpen && <Modal onClose={toggleModal}><Form action="#" id='form' onSubmit={formSubmit}>
         <ModalTitle>Залиште нам своє повідомлення і ми вам передзвонимо</ModalTitle>
         <Group>
-          <Input type="text" />
-          <Label>Ім'я</Label>
+          <Input type="text" id='name' name='name' required/>
+          <Label htmlFor='name'>Ім'я*:</Label>
         </Group>
         <Group>
-          <Input type="tel" />
-          <Label>Мобільний номер</Label>
+          <Input type="tel" id='tel' name='tel' required/>
+          <Label htmlFor='tel'>Мобільний номер*:</Label>
         </Group>
         <Group>
-          <Input type="text" />
-          <Label>Автомобіль</Label>
+          <Input type="text" id='car' name='car' required/>
+          <Label htmlFor='car'>Автомобіль*:</Label>
         </Group>
         <Group>
-          <Input type="text" />
-          <Label>Послуга</Label>
+          <Input type="text" id='work' name='work' required/>
+          <Label htmlFor='work'>Послуга*:</Label>
         </Group>
         
         <ModalButton type="submit">Відправити</ModalButton>
