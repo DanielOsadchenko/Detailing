@@ -1,14 +1,19 @@
-import React from 'react';
+import React, {useState} from 'react';
 import logo from '../images/fullLogo.png';
 import blackLogo from '../images/blackLogo.png';
 // import smallLogo from '../images/logo.png';
 import { Mail, Tel, Tag, Instagram, Facebook, Whatsapp } from './source/images';
 import SimpleSlider from './SimpleSlider/SimpleSlider';
 import { Container, HeroBg, BlackLine, BlackLogo, Address, FooterTag, FooterContainer, MapBox, SvgBox, ContactCard, Card, SliderBox, CardTitle, CardBox, CardText, CardPrice, About, PriceCardSet, Title, TitleBox, HeaderNav, Header, Line, Nav, NavLink, Hero, HeroTitle, HeroButton, Logo, TitleLine, ResultBtn, ContactSet } from './App.styled';
-
+import { Label, Input, Group, Form, ModalTitle, ModalButton } from "./Modal/Modal.styled";
+import { Modal } from './Modal/Modal';
 
 export const App = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
+  const toggleModal = () => {
+    setIsModalOpen(prev => !prev);
+  }
     return <div>
       <HeroBg>
         
@@ -31,7 +36,7 @@ export const App = () => {
         <Hero>
           <Container>
             <HeroTitle id='#Home'>Студія детейлінгу</HeroTitle>
-            <HeroButton type='button'>Обрати послугу</HeroButton>
+            <HeroButton type='button' onClick={toggleModal} >Обрати послугу</HeroButton>
             </Container>
         </Hero>
         
@@ -108,7 +113,7 @@ export const App = () => {
           <SimpleSlider/>
         </SliderBox>
         
-        <ResultBtn type='button'>Обрати послугу</ResultBtn>
+        <ResultBtn type='button' onClick={toggleModal}>Обрати послугу</ResultBtn>
         </Container>
       </section>
 
@@ -168,8 +173,29 @@ export const App = () => {
           <FooterTag>© 2022 Всі права захищені</FooterTag>
           <FooterTag>Designed by: <a href='https://www.behance.net/denionly'>Denys Rudenko</a></FooterTag>
         </Container>
-        </footer>
-
+      </footer>
+      
+      {isModalOpen && <Modal onClose={toggleModal}><Form action="">
+        <ModalTitle>Залиште нам своє повідомлення і ми вам передзвонимо</ModalTitle>
+        <Group>
+          <Input type="text" />
+          <Label>Ім'я</Label>
+        </Group>
+        <Group>
+          <Input type="tel" />
+          <Label>Мобільний номер</Label>
+        </Group>
+        <Group>
+          <Input type="text" />
+          <Label>Автомобіль</Label>
+        </Group>
+        <Group>
+          <Input type="text" />
+          <Label>Послуга</Label>
+        </Group>
+        
+        <ModalButton type="submit">Відправити</ModalButton>
+      </Form></Modal>}
     </div>
   
   };
