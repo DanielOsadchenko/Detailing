@@ -7,6 +7,8 @@ import SimpleSlider from './SimpleSlider/SimpleSlider';
 import { Container, HeroBg, BlackLine, BlackLogo, Address, FooterTag, FooterContainer, MapBox, SvgBox, ContactCard, Card, SliderBox, CardTitle, CardBox, CardText, CardPrice, About, PriceCardSet, Title, TitleBox, HeaderNav, Header, Line, Nav, NavLink, Hero, HeroTitle, HeroButton, Logo, TitleLine, ResultBtn, ContactSet } from './App.styled';
 import { Label, Input, Group, Form, ModalTitle, ModalButton } from "./Modal/Modal.styled";
 import { Modal } from './Modal/Modal';
+import emailjs from '@emailjs/browser';
+import Notiflix from 'notiflix';
 
 export const App = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -16,25 +18,27 @@ export const App = () => {
   }
 
   const formSubmit = (e) => {
-    async function submit() {
-      e.preventDefault();
-      const form = document.querySelector('#form');
-      let formData = new FormData(form);
-      let responce = await fetch('sendmail.php', {
-        method: 'POST',
-        body: formData,
-      });
-      if (responce.ok) {
-        let result = await responce.json();
-        alert(result.message);
-        form.reset();
-      }
-      else {alert('Помилка!')};
-    }
+    e.preventDefault();
+    console.log(e);
+    var templateParams = {
+    name: e.target.elements.name.value,
+    tel: e.target.elements.tel.value,
+    car: e.target.elements.car.value,
+    work: e.target.elements.work.value,
     
-    
-    submit();
+};
+ 
+emailjs.send('service_60g9ep7', 'template_apktkvk', templateParams, 'f859fANp_oBo_DePi')
+  .then(function (response) {
+      Notiflix.Notify.success('Заявка відправлена!');
+  }, function (error) {
+    Notiflix.Notify.failure('Щось пішло не так. Спробуйте пізніше');
+      
+    });
+    e.target.reset();
+
   }
+
     return <div>
       <HeroBg>
         
@@ -161,7 +165,7 @@ export const App = () => {
               <ContactCard>
                 <SvgBox><Mail fill='#E89636' /></SvgBox>
             
-            <a href='mailto:rudik20011@gmail.com'>rudik20011@gmail.com</a>
+            <a href='mailto:detailing.by.semenov@gmail.com'>detailing.by.semenov@gmail.com</a>
           </ContactCard>
             <ContactCard>
               <div style={{width: '50%', display: 'flex', justifyContent: 'space-between'}}><a href='https://www.instagram.com/'><Instagram /></a>
@@ -196,7 +200,7 @@ export const App = () => {
         </Container>
       </footer>
       
-      {isModalOpen && <Modal onClose={toggleModal}><Form action="#" id='form' onSubmit={formSubmit}>
+      {isModalOpen && <Modal onClose={toggleModal}><Form action="" id='form' onSubmit={formSubmit} >
         <ModalTitle>Залиште нам своє повідомлення і ми вам передзвонимо</ModalTitle>
         <Group>
           <Input type="text" id='name' name='name' required/>

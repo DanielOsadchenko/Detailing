@@ -1,5 +1,9 @@
 @import-normalize;
 @import '~react-image-gallery/styles/css/image-gallery.css';
+
+html {
+  scroll-behavior: smooth;
+}
 body {
   margin: 0;
   font-family: 'Jura', sans-serif;
