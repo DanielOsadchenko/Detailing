@@ -13,29 +13,20 @@
   <link href="https://fonts.googleapis.com/css2?family=Jura:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
   <title>Detailing by Semenov</title>
-  <script type="text/javascript">
-    (function (l) {
-      if (l.search[1] === '/') {
-        var decoded = l.search
-          .slice(1)
-          .split('&')
-          .map(function (s) {
-            return s.replace(/~and~/g, '&');
-          })
-          .join('?');
-        window.history.replaceState(
-          null,
-          null,
-          l.pathname.slice(0, -1) + decoded + l.hash
-        );
-      }
-    })(window.location);
-  </script>
+
 </head>
 
 <body>
   <div id="root"></div>
   <div id="modalRoot"></div>
+
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+  </script>
+  <script type="text/javascript">
+    (function () {
+      emailjs.init("f859fANp_oBo_DePi");
+    })();
+  </script>
 </body>
 
 </html>
